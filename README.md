@@ -1,9 +1,32 @@
 # MAPA COLOMBIA
-en este trabajo  explica las ubicaciones y los sitios turisticos  y cultura
+Departamentos y Regiones
 
-## COMIDAS TIPICAS
-Nos dan a conocer los platos tipicos de cada region
-## HTML
-LO usamos para ajustarle los textos e imagenes
-##CSS
-para darle las funciones a las paginas de verla funcionalidad de las imagenes y texto
+## DESCRIPCION
+En los siguientes departamentos y regiones de colombia exaltamos los puntos de interes y sus comidas tipicas 
+con el fin de que las personas conozcan. 
+
+
+## FUNCIONALIDAD
+Que las personas se sientan en un ambiente sano, y disfruten de la gastronomia y lugares
+
+## LUGARES
+| Departamento  |     Region    |
+| ------------- |:-------------:|
+|   Arauca      |    Orinoquia  |
+|   Caqueta     |    Amazonia   |
+|    Nariño     |     Andina    |
+|    Santander  |     Andina    |
+|    Vichada    |     Orinoquia |
+
+## Caracteristicas Principales
+La Gastronomia, Lugares Destacados
+
+## Desarrollado con
+- HTML
+- CSS
+
+ ## Acerca de
+ Este proyecto fue desarrollado por (mariahelenasalas83@gmail.com)
+
+
+
