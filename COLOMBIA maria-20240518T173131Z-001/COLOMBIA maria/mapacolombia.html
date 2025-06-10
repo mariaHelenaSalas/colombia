@@ -8,23 +8,83 @@
     <center>VIAJA Y CONOCE COLOMBIA</center>
     <br>
     <br>
-    
+    <style>
+      .map-container {
+        position: relative;
+        display: inline-block;
+      }
+      #highlight {
+        position: absolute;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+        display: none;
+        z-index: 10;
+      }
+    </style>
 </head>
-<body><center><img src="images/mapacol.jpg" usemap="#image-map"></center>
+<body>
+    <div class="map-container">
+      <img id="colombia-map" src="images/mapacol.jpg" usemap="#image-map">
+      <canvas id="highlight" width="600" height="800"></canvas>
+    </div>
     <center>DESARROLLADOR: MARIA HELENA</center>
     <br>
     <center>TODOS LOS DERECHOS RESERVADO 2024</center>
-    
+
+    <map name="image-map">
+        <area target="" alt="" title="" href="nariño.html" coords="54,349,62,345,74,347,83,356,94,363,99,370,102,378,110,380,113,386,113,393,108,397,106,405,106,415,102,421,92,422,83,402,76,404,68,404,57,395,47,390,39,379,48,377,54,378,55,366,52,358" shape="poly">
+        <area target="" alt="" title="" href="vichada.html" coords="350,233,360,232,371,228,384,226,401,225,411,224,424,223,432,228,426,237,421,247,419,257,417,266,414,274,414,280,417,286,422,300,411,302,398,302,386,310,375,311,366,315,356,315,343,320,329,326,321,332,315,337,310,342,307,330,308,313,310,299,310,286,310,276,310,267,318,260,327,253,334,248,342,246" shape="poly">
+        <area target="" alt="" title="" href="caqueta.html" coords="175,348,193,357,202,361,233,380,239,390,247,394,264,402,275,406,283,410,291,420,291,427,281,431,276,439,268,448,257,451,240,449,232,448,223,445,214,445,207,440,198,441,189,439,184,435,180,427,171,416,164,412,157,408,147,403,139,399,131,388,143,380,154,374,157,364,164,353" shape="poly">
+        <area target="" alt="" title="" href="santander.html" coords="216,177,222,179,231,183,240,184,243,190,247,197,253,197,259,200,261,206,258,214,253,220,247,225,240,234,232,238,231,229,225,227,223,232,217,238,211,241,201,234,194,227,200,217,205,207,212,201,212,188,217,165,276,200,274,210,269,218,267,225,274,227" shape="poly">
+        <area target="" alt="" title="" href="arauca.html" coords="277,200,288,198,297,197,305,200,317,199,326,198,339,200,347,212,355,221,360,224,361,229,349,232,336,224,326,224,316,227,303,224,291,228,281,227,272,228,269,220,276,218,279,207" shape="poly">
+    </map>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+    <script>
+      window.onload = function() {
+        imageMapResize();
+
+        // Hover effect
+        const areas = document.querySelectorAll('area');
+        const highlight = document.getElementById('highlight');
+        const mapImg = document.getElementById('colombia-map');
+
+        // Ajusta el tamaño del canvas al de la imagen
+        function resizeCanvas() {
+          highlight.width = mapImg.width;
+          highlight.height = mapImg.height;
+        }
+        mapImg.onload = resizeCanvas;
+        resizeCanvas();
+
+        areas.forEach(area => {
+          area.addEventListener('mouseenter', function() {
+            const coords = this.coords.split(',').map(Number);
+            const ctx = highlight.getContext('2d');
+            ctx.clearRect(0, 0, highlight.width, highlight.height);
+            ctx.beginPath();
+            for (let i = 0; i < coords.length; i += 2) {
+              if (i === 0) {
+                ctx.moveTo(coords[i], coords[i+1]);
+              } else {
+                ctx.lineTo(coords[i], coords[i+1]);
+              }
+            }
+            ctx.closePath();
+            ctx.fillStyle = 'rgba(255,152,0,0.3)';
+            ctx.fill();
+            ctx.strokeStyle = '#ff9800';
+            ctx.stroke();
+            highlight.style.display = 'block';
+          });
+          area.addEventListener('mouseleave', function() {
+            const ctx = highlight.getContext('2d');
+            ctx.clearRect(0, 0, highlight.width, highlight.height);
+            highlight.style.display = 'none';
+          });
+        });
+      };
+    </script>
 </body>
-
-
-<img src="mapacol.jpg" usemap="#image-map">
-
-<map name="image-map">
-    <area target="" alt="" title="" href="nariño.html" coords="54,349,62,345,74,347,83,356,94,363,99,370,102,378,110,380,113,386,113,393,108,397,106,405,106,415,102,421,92,422,83,402,76,404,68,404,57,395,47,390,39,379,48,377,54,378,55,366,52,358" shape="poly">
-    <area target="" alt="" title="" href="vichada.html" coords="350,233,360,232,371,228,384,226,401,225,411,224,424,223,432,228,426,237,421,247,419,257,417,266,414,274,414,280,417,286,422,300,411,302,398,302,386,310,375,311,366,315,356,315,343,320,329,326,321,332,315,337,310,342,307,330,308,313,310,299,310,286,310,276,310,267,318,260,327,253,334,248,342,246" shape="poly">
-    <area target="" alt="" title="" href="caqueta.html" coords="175,348,193,357,202,361,233,380,239,390,247,394,264,402,275,406,283,410,291,420,291,427,281,431,276,439,268,448,257,451,240,449,232,448,223,445,214,445,207,440,198,441,189,439,184,435,180,427,171,416,164,412,157,408,147,403,139,399,131,388,143,380,154,374,157,364,164,353" shape="poly">
-    <area target="" alt="" title="" href="santander.html" coords="216,177,222,179,231,183,240,184,243,190,247,197,253,197,259,200,261,206,258,214,253,220,247,225,240,234,232,238,231,229,225,227,223,232,217,238,211,241,201,234,194,227,200,217,205,207,212,201,212,188,217,165,276,200,274,210,269,218,267,225,274,227" shape="poly">
-    <area target="" alt="" title="" href="arauca.html" coords="277,200,288,198,297,197,305,200,317,199,326,198,339,200,347,212,355,221,360,224,361,229,349,232,336,224,326,224,316,227,303,224,291,228,281,227,272,228,269,220,276,218,279,207" shape="poly">
-</map>
 </html>

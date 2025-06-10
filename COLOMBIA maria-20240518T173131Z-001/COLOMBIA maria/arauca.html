@@ -1,27 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Arauca - Orinoquía</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            font-family: 'Montserrat', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 32px 24px 24px 24px;
+        }
+        h1, h2 {
+            text-align: center;
+            margin-top: 0;
+        }
+        h1 {
+            color: #2e7d32;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #1565c0;
+            margin-bottom: 16px;
+        }
+        .section-title {
+            margin-top: 32px;
+            margin-bottom: 8px;
+            color: #ff9800;
+            font-size: 1.5em;
+        }
+        .img-center {
+            display: block;
+            margin: 18px auto 18px auto;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+            max-width: 100%;
+            height: auto;
+        }
+        .desc, .gastro {
+            font-size: 1.15em;
+            line-height: 1.6;
+            margin: 0 0 24px 0;
+            text-align: justify;
+        }
+        .interest {
+            font-weight: bold;
+            color: #388e3c;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 12px 4px;
+            }
+            h1 { font-size: 1.5em; }
+            h2, .section-title { font-size: 1.1em; }
+        }
+    </style>
 </head>
 <body>
-    <center><h1>ARAUCA</h1></center>
-    <h2>REGIÓN: ORINOQUIA</h2></center>
-    <br>
-    <br>
-    <center> <h2>PUNTO DE INTERES</h2></center>
-    <br>
-    <center>PARQUE SIMÓN BOLIVAR</h2></center>
-   <center> <img src="images/arauca parque.jpg" width="500"></center>
-    <br>
-    <center><p></p></center>
-    <center><p><h2>DESCRIPCION </h2></p></center>
-    <h1>Este evento se reconoce en la ciudad capital de Arauca con el Parque Simón Bolívar. Aparte de senderos tranquilos y árboles frondosos, el parque tiene monumentos que honran estos eventos históricos.</h1>
-    <br>
-    <br>
-    <center><p><h2>GASTRONOMIA </h2></p></center>
-    <center> <img src="images/gastro-arauca.jpeg" width="500"></center>
-    <h1>HALLACAS: Los platos más tradicionales de la zona tienen como influencia la cocina del Amazonas así como los deparamentos colindantes y Venezuela.  Las recetas más típicas son las hallacas, picillo de pescado, carne asada  </h1>
+    <div class="container">
+        <h1>ARAUCA</h1>
+        <h2>Región: Orinoquía</h2>
+
+        <div class="section-title">Punto de Interés</div>
+        <div class="interest">Parque Simón Bolívar</div>
+        <img src="images/arauca parque.jpg" alt="Parque Simón Bolívar" class="img-center" width="500">
+
+        <div class="section-title">Descripción</div>
+        <div class="desc">
+            Este evento se reconoce en la ciudad capital de Arauca con el Parque Simón Bolívar. Aparte de senderos tranquilos y árboles frondosos, el parque tiene monumentos que honran estos eventos históricos.
+        </div>
+
+        <div class="section-title">Gastronomía</div>
+        <img src="images/gastro-arauca.jpeg" alt="Gastronomía de Arauca" class="img-center" width="500">
+        <div class="gastro">
+            <strong>Hallacas:</strong> Los platos más tradicionales de la zona tienen como influencia la cocina del Amazonas, así como los departamentos colindantes y Venezuela. Las recetas más típicas son las hallacas, picillo de pescado y carne asada.
+        </div>
+    </div>
 </body>
 </html>

@@ -1,29 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nariño - Andina</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            font-family: 'Montserrat', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 32px 24px 24px 24px;
+        }
+        h1, h2 {
+            text-align: center;
+            margin-top: 0;
+        }
+        h1 {
+            color: #2e7d32;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #1565c0;
+            margin-bottom: 16px;
+        }
+        .section-title {
+            margin-top: 32px;
+            margin-bottom: 8px;
+            color: #ff9800;
+            font-size: 1.5em;
+        }
+        .img-center {
+            display: block;
+            margin: 18px auto 18px auto;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+            max-width: 100%;
+            height: auto;
+        }
+        .desc, .gastro {
+            font-size: 1.15em;
+            line-height: 1.6;
+            margin: 0 0 24px 0;
+            text-align: justify;
+        }
+        .interest {
+            font-weight: bold;
+            color: #388e3c;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 12px 4px;
+            }
+            h1 { font-size: 1.5em; }
+            h2, .section-title { font-size: 1.1em; }
+        }
+    </style>
 </head>
 <body>
-    <center><h1>NARIÑO</h1></center>
-    <h2>REGIÓN: ANDINA</h2></
-    <br>
-    <br>
-    <center> <h2>PUNTO DE INTERES</h2></center>
-    <br>
-    <center>JESÚS NAZARENO<h2></h2></center>
-   <center> <img src="images/turis-nariño.jpg" width="500"></center>
-    <br>
-    <center><p></p></center>
-    <center><p><h2>DESCRIPCION </h2></p></center>
-    <h1>Sobre la nave izquierda del templo se construyeron diez cúpulas que como bonetes rojos decoran el exterior de la iglesia y forman redondeles dentro del templo. es El Tambo, al norte, a solo 40 kilómetros y una hora en carro desde Pasto.
+    <div class="container">
+        <h1>NARIÑO</h1>
+        <h2>Región: Andina</h2>
 
-    </h1>
-    <br>
-    <br>
-    <center><p><h2>GASTRONOMIA </h2></p></center>
-    <center> <img src="images/gastronomia-narino.webp" width="500"></center>
-    <h1>Cuy: La comida típica de Nariño incluye platos como el frito pastuso, el cuy o conejillo de indias asado, las empanadas, los quimbolitos y el canelazo. </h1>
+        <div class="section-title">Punto de Interés</div>
+        <div class="interest">Jesús Nazareno</div>
+        <img src="images/turis-nariño.jpg" alt="Jesús Nazareno" class="img-center" width="500">
+
+        <div class="section-title">Descripción</div>
+        <div class="desc">
+            Sobre la nave izquierda del templo se construyeron diez cúpulas que como bonetes rojos decoran el exterior de la iglesia y forman redondeles dentro del templo. Es El Tambo, al norte, a solo 40 kilómetros y una hora en carro desde Pasto.
+        </div>
+
+        <div class="section-title">Gastronomía</div>
+        <img src="images/gastronomia-narino.webp" alt="Gastronomía de Nariño" class="img-center" width="500">
+        <div class="gastro">
+            <strong>Cuy:</strong> La comida típica de Nariño incluye platos como el frito pastuso, el cuy o conejillo de indias asado, las empanadas, los quimbolitos y el canelazo.
+        </div>
+    </div>
 </body>
 </html>

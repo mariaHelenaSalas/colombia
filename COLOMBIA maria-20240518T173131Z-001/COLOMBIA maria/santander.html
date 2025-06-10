@@ -1,27 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Santander - Andina</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            font-family: 'Montserrat', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 32px 24px 24px 24px;
+        }
+        h1, h2 {
+            text-align: center;
+            margin-top: 0;
+        }
+        h1 {
+            color: #2e7d32;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #1565c0;
+            margin-bottom: 16px;
+        }
+        .section-title {
+            margin-top: 32px;
+            margin-bottom: 8px;
+            color: #ff9800;
+            font-size: 1.5em;
+        }
+        .img-center {
+            display: block;
+            margin: 18px auto 18px auto;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+            max-width: 100%;
+            height: auto;
+        }
+        .desc, .gastro {
+            font-size: 1.15em;
+            line-height: 1.6;
+            margin: 0 0 24px 0;
+            text-align: justify;
+        }
+        .interest {
+            font-weight: bold;
+            color: #388e3c;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 12px 4px;
+            }
+            h1 { font-size: 1.5em; }
+            h2, .section-title { font-size: 1.1em; }
+        }
+    </style>
 </head>
 <body>
-    <center><h1>SANTANDER</h1></center>
-    <h2>REGIÓN: ANDINA</h2></
-    <br>
-    <br>
-    <center> <h2>PUNTO DE INTERES</h2></center>
-    <br>
-    <center>PARQUE NACIONAL DEL CHICAMOCHA</h2></center>
-   <center> <img src="images/santader-chica.jpg" width="500"></center>
-    <br>
-    <center><p></p></center>
-    <center><p><h2>DESCRIPCION </h2></p></center>
-    <h1>Destino de talla mundial, un lugar único y encantador en Colombia, que cautiva a Nacionales y Extranjeros por su belleza natural, ya que se encuentra ubicado en el imponente Cañón del Chicamocha en Santander, el cual puedes atravesar en un teleférico, lo que lo hace una obra única en el mundo. </h1>
-    <br>
-    <br>
-    <center><p><h2>GASTRONOMIA </h2></p></center>
-    <center> <img src="images/gastro-santan.jpg" width="500"></center>
-    <h1>Mute: es una sopa que se prepara con diferentes ingredientes que se complementan perfectamente: carne, tripa, costilla de res, granos, papa, pastas, maíz y especias. </h1>
+    <div class="container">
+        <h1>SANTANDER</h1>
+        <h2>Región: Andina</h2>
+
+        <div class="section-title">Punto de Interés</div>
+        <div class="interest">Parque Nacional del Chicamocha</div>
+        <img src="images/santader-chica.jpg" alt="Parque Nacional del Chicamocha" class="img-center" width="500">
+
+        <div class="section-title">Descripción</div>
+        <div class="desc">
+            Destino de talla mundial, un lugar único y encantador en Colombia, que cautiva a nacionales y extranjeros por su belleza natural, ya que se encuentra ubicado en el imponente Cañón del Chicamocha en Santander, el cual puedes atravesar en un teleférico, lo que lo hace una obra única en el mundo.
+        </div>
+
+        <div class="section-title">Gastronomía</div>
+        <img src="images/gastro-santan.jpg" alt="Gastronomía de Santander" class="img-center" width="500">
+        <div class="gastro">
+            <strong>Mute:</strong> Es una sopa que se prepara con diferentes ingredientes que se complementan perfectamente: carne, tripa, costilla de res, granos, papa, pastas, maíz y especias.
+        </div>
+    </div>
 </body>
 </html>
